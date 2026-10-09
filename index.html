@@ -57,41 +57,41 @@
 
 		<h3>Part 1: Bezier curves with 1D de Casteljau subdivision</h3>
 			De Casteljau's algorithm is a formula that interpolates between control points to generate points that on a curve that connects the 
-			start and end points. Based on a distance t in [0,1], we use the formula \( (1-t)(p_1) + (t)(p_2) \) between all adjacent control points \(p_0\) and \(p_1)\
+			start and end points. Based on a distance t in [0,1], we use the formula \( (1-t)(p_1) + (t)(p_2) \) between all adjacent control points \(p_1\) and \(p_2\)
 			and return the list of resulting sums as the intermediate points. This method is used and repeated until only one sum remains, 
 			which is the resulting point that lies on the bezier curve at parameter t, where t=0 indicates the starting point and t=1 indicates the ending point.
 		<div style="display: flex; flex-direction: column; align-items: center;">
 			<table style="width: 70%; text-align: center; border-collapse: collapse;">
 			  <tr>
 				<td style="text-align: center;">
-				  <img src="assets/part101.png" width="200px"/>
+				  <img src="assets/part101.png" width="300px"/>
 				  <figcaption>Original Control Points</figcaption>
 				</td>
 				<td style="text-align: center;">
-				  <img src="assets/teapot.png" width="400px"/>
+				  <img src="assets/part102" width="300px"/>
 				  <figcaption>Control Points at 1 step</figcaption>
 				</td>
 				 <td style="text-align: center;">
-				  <img src="assets/part103.png" width="200px"/>
+				  <img src="assets/part103.png" width="300px"/>
 				  <figcaption>Control Points at 2 steps</figcaption>
 				</td>
 				<td style="text-align: center;">
-				  <img src="assets/part104.png" width="200px"/>
+				  <img src="assets/part104.png" width="300px"/>
 				  <figcaption>Control Points at 3 steps</figcaption>
 				</td>
 			  </tr>
 				
 			  <tr>
 				<td style="text-align: center;">
-				  <img src="assets/part105.png" width="200px"/>
+				  <img src="assets/part105.png" width="300px"/>
 				  <figcaption>Control Points at 4 steps</figcaption>
 				</td>
 				<td style="text-align: center;">
-				  <img src="assets/part107.png" width="200px"/>
+				  <img src="assets/part107.png" width="300px"/>
 				  <figcaption>Control Points at 5 steps, with resulting point and curve</figcaption>
 				</td>
 				  <td style="text-align: center;">
-				  <img src="assets/part108.png" width="200px"/>
+				  <img src="assets/part108.png" width="300px"/>
 				  <figcaption>Curve with different points and t value</figcaption>
 				</td>
 			  </tr>
