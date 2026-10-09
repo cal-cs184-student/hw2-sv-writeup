@@ -125,7 +125,24 @@
 		</div>
 
 		<h3>Part 2: Bezier surfaces with separable 1D de Casteljau</h3>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		Similarly, evaluating a Bézier surface follows the same principle as evaluating a Bézier curve, except that it uses two parameters, \(u\) and \(v\), 
+			to specify a point across the two dimensions of the surface. We first evaluate the Bézier curve along each row of 3D control points using 
+			the parameter \(u\). At each step, we interpolate between adjacent control points \(p_1\) and \(p_2\) using the formula \((1-u)p_1 + up_2\), 
+			repeating this process until each row produces a single 3D point. 
+			We then use the parameter \(v\) to evaluate the Bézier curve through the resulting points, interpolating until only one point remains. 
+			The final 3D point lies on the Bézier surface at parameters \((u,v)\).
+
+			<div style="display: flex; flex-direction: column; align-items: center;">
+			<table style="width: 100%; text-align: center; border-collapse: collapse;">
+			  <tr>
+				<td style="text-align: center;">
+				  <img src="assets/part121.png" width="400px"/>
+				  <figcaption>teapot.bez</figcaption>
+				</td>
+			  </tr>
+			</table>
+		</div>
+			
 
 		<h2>Section II: Triangle Meshes and Half-Edge Data Structure</h2>
 
