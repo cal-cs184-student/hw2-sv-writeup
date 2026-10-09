@@ -147,8 +147,31 @@
 		<h2>Section II: Triangle Meshes and Half-Edge Data Structure</h2>
 
 		<h3>Part 3: Area-weighted vertex normals</h3>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
+		To calculate the unit normal at a vertex, we compute the area-weighted average of the normals of the faces incident to that vertex, then normalize the resulting vector. I adapted the traversal in the printNeighbors() method to iterate through the faces adjacent to the vertex. For each face, I retrieve the other two vertices,
+		\(v_1\) and \(v_2\), and compute the cross product of their position vectors relative to the current vertex:
+		
+		<code>cross((v1 − this->position),(v2−this->position))</code>
+		
+		Which results in a vector perpendicular to the face with a magnitude proportional to twice the triangle's area. 
+		After adding all cross products across all incident faces, 
+		I normalize the sum using unit() to obtain the vertex's unit normal.
+
+		<div style="display: flex; flex-direction: column; align-items: center;">
+			<table style="width: 100%; text-align: center; border-collapse: collapse;">
+			  <tr>
+				<td style="text-align: center;">
+				  <img src="assets/part31.png" width="400px"/>
+				  <figcaption>Teapot with Flat Shading</figcaption>
+				</td>
+				<td style="text-align: center;">
+				  <img src="assets/part32.png" width="400px"/>
+				  <figcaption>Teapot with Phong Shading</figcaption>
+				</td>
+			  </tr>
+			</table>
+		</div>
+			
 		<h3>Part 4: Edge flip</h3>
 		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
