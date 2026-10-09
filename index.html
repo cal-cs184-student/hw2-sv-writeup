@@ -48,13 +48,21 @@
 		-->
 
 		<h2>Overview</h2>
-		Give a high-level overview of what you implemented in this homework. Think about what you've built as a whole. Share your thoughts on what interesting things you've learned from completing the homework.
-
+		In this homework, I implemented methods to generate curves and process 3D meshes, such as upsampling, shading, edge splitting, and edge flipping. 
+		I found the subdivision and edge splitting implementation most interesting; it was especially valuable to draw out the edge operations on paper before 
+		writing it out in code, and I developed a stronger understanding of the operation as a result. I also gained a stronger understanding of iterators and 
+		pointers throughout coding since I do not use C++ very often.
+			
 		<h2>Section I: Bezier Curves and Surfaces</h2>
 
 		<h3>Part 1: Bezier curves with 1D de Casteljau subdivision</h3>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			De Casteljau's algorithm is a formula that interpolates between control points to generate points that on a curve that connects the 
+			start and end points. Based on a distance t in [0,1], we use the formula \( (1-t)(p_1) + (t)(p_2) \) between all adjacent control points \(p_0\) and \(p_1)\
+			and return the list of resulting sums as the intermediate points. This method is used and repeated until only one sum remains, 
+			which is the resulting point that lies on the bezier curve at parameter t, where t=0 indicates the starting point and t=1 indicates the ending point.
 
+			
+			
 		<p>Here is an example 2x2 gridlike structure using an HTML table. Each <b>tr</b> is a row and each <b>td</b> is a column in that row. You might find this useful for framing and showing your result images in an organized fashion.</p>
 		<div style="display: flex; flex-direction: column; align-items: center;">
 			<table style="width: 100%; text-align: center; border-collapse: collapse;">
