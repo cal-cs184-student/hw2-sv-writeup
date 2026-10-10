@@ -219,9 +219,7 @@ After calculating and storing all new positions, I split each original edge usin
 				</td>
 			  </tr>
 			</table>
-		</div>
 			
-
 		<p>After several iterations of Loop subdivision, the cube becomes progressively smoother, with its sharp corners becoming rounded and its edges losing their original sharp appearance. This occurs because subdivision moves vertices toward weighted averages of their neighboring positions. This can be mitigated by pre-splitting edges, which help retain more of the cube's original shape by introducing additional vertices and changing how the geometry is subdivided.
 The cube can become slightly asymmetric after repeated subdivision, which is caused by the triangulation of its faces. The diagonals chosen when representing each square face as triangles influence the neighborhood relationships and subsequent subdivision geometry. If these diagonals are oriented inconsistently across the cube, subdivision can treat geometrically equivalent regions differently, producing asymmetry. To mitigate this, I preprocessed the cube by splitting selected edges and flipping edges to create a more symmetric and consistent triangulation across its faces. This makes the mesh's local connectivity more uniform, helping subdivision produce a more symmetric result. </p>
 
